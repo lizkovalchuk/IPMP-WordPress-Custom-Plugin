@@ -51,12 +51,12 @@ register_activation_hook( __FILE__, 'activate_alumni_custom_profile' );
 require_once plugin_dir_path( __FILE__ ) . 'includes/class-alumni-custom-profile-activator.php';
 
 
-function add_custom_scripts111(){
+function add_custom_scriptsACP(){
 	wp_enqueue_style('profile-css', plugins_url() . '/alumni-custom-profile/assets/css/profile.css', 10, 99);	
 	wp_enqueue_script('profile-js', plugins_url() . '/alumni-custom-profile/assets/js/profile.js', array('jquery'));
 }
 
-add_action('wp_enqueue_scripts', 'add_custom_scripts111');
+add_action('wp_enqueue_scripts', 'add_custom_scriptsACP');
 
 
 
