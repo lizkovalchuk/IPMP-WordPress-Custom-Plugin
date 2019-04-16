@@ -1,0 +1,133 @@
+/* TABLE OF CONTENTS
+
+1. General
+2. Header
+3. Section
+4. Footer
+5. Pop-up
+6. Mobile Nav
+
+ */
+
+/* 1.General */
+
+body{
+    font-family: arial !important;
+    background-color: rgba(211,211,211, 0.2) !important;
+}
+.home{
+    font-family: arial !important;
+    background-color: white !important;
+}
+button{
+    background-color: #D3D3D3 !important;
+    border: 1px solid #ccc !important;
+}
+button:hover{
+    background-color: #B0B0B0 !important;
+}
+#geodir_advance_search-1 > form > div > div > div > button
+{
+    background-color: #5bc2fd !important;
+}
+#geodir_advance_search-1 > form > div > div > div > button > i{
+    background-color: none !important;
+}
+#geodir_advance_search-1 > form > div > div > div > button:hover
+{
+    background-color: #568c9e!important;
+}
+.content-box,
+.geodir-listing-search .gd-search-bar-style {
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2) !important;
+}
+#geodir_advance_search-1 > form {
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2) !important;
+}
+
+/* 2.Header */
+
+html > body > div.mm-page  #ds-container  #site-header .container .site-logo-wrap {
+    max-width: 110px !important;
+}
+@media (max-width: 992px) {
+    .site-logo-wrap {
+        margin: unset !important;
+    }
+    .dt-nav-toggle {
+        top: 13px !important;
+    }
+}
+html > body > div.mm-page  #ds-container  #site-header .container .site-logo-wrap > .site-logo{
+    margin-top: -8px !important;
+}
+html > body > div.mm-page  #ds-container  #site-header{
+    min-height: unset;
+    height: 100px;
+}
+#site-header #primary-nav{
+    width: 88% !important;
+}
+#site-header #primary-nav #menu-primary-menu > li > a {
+    line-height: 40px !important;
+    text-transform: initial;
+    color: #757575 !important;
+}
+#alumni-custom-h1{
+    position: absolute;
+    font-size: 40px;
+    top: 48px;
+    padding-bottom: 5px;
+    padding-top: 7px;
+    color:  #757575 !important;
+}
+@media (max-width: 430px) {
+    #alumni-custom-h1{
+        font-size: 25px;
+    }
+}
+
+/* 3. SECTION */
+
+.home #geodir_content{
+    display: none;
+}
+
+/* 4.FOOTER */
+
+#footer{
+    display: none;
+}
+
+/* 5.POP-UP */
+
+.geodir-bubble-meta-bottom{
+    display: none;
+}
+.gd-bubble{
+    height: 100px !important;
+}
+.geodir-bubble_desc h4{
+    background: white !important;
+    color: black !important;
+    width: 80%;
+    position: absolute;
+    top: 10px;
+    left: 3px;
+}
+.geodir-bubble_desc h4 a {
+    color: #757575;
+    font-weight: bold;
+}
+#geodir_map_v3_home_map_1 > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(4) > div > div > div > div{
+    border-radius: 0px !important;
+}
+
+/* MOBILE NAVS */
+.dt-mobile-account-wrap{
+    display: none !important;
+}
+
+
+
+

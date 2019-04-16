@@ -1,0 +1,32 @@
+.page-id-320 
+.geodir_preview_section{
+    background: none !important;
+    background: unset !important;
+    max-width: 900px !important;
+}
+.page-id-320
+#geodir_content{
+    display: none !important;
+}
+.page-id-320 
+#publish_listing
+input{
+    background-color: #5bc2fd !important;
+    border: 1px solid #5bc2fd !important;
+}
+.page-id-320 
+#publish_listing
+input:hover{
+    background-color:#568c9e!important;
+}
+.page-id-320 
+#publish_listing
+a{
+    background-color: #5bc2fd !important;
+    border: 1px solid #5bc2fd !important;
+}
+.page-id-320 
+#publish_listing
+a:hover{
+    background-color: #568c9e!important;
+}

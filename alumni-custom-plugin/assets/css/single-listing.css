@@ -1,0 +1,51 @@
+#geodir_wrapper .geodir-breadcrumb #breadcrumbs li a{
+    color: rgb(65, 162, 216);
+}
+#breadcrumbs{
+    display: none !important;
+}
+.single-gd_place #geodir_content{
+    float: none !important;
+    margin: 0 auto !important;
+}
+.geodir-tags{
+    display: none;
+}
+span[itemprop="addressCountry"]{
+    display: none;
+}
+.clearfix, .geodir-common a{
+    color: rgb(65, 162, 216);
+}
+.clearfix, .geodir-common a:hover{
+    color: rgb(26, 96, 134);
+}
+.clearfix, .geodir-common p{
+    color: #757575;
+}
+dl.geodir-tab-head dd.geodir-tab-active a{
+    color: #FFFFFF;
+    background-color: rgb(65, 162, 216) !important;
+    border: 1px solid rgb(26, 96, 134) !important;
+}
+#gd-tabs > dl > dd:nth-child(2){
+    display: none !important;
+}
+#post_profileTab{
+    display: none !important; 
+}
+.gd-get-directions{
+    display: none;
+}
+.geodir-addtofav a{
+    display: none;
+}
+.geodir-content-right div:nth-child(1){
+    display: none;
+}
+.geodir-content-right div:nth-child(2){
+    display: none;
+}
+#geodir_content a:visited{
+    color: rgb(65, 162, 216);
+}

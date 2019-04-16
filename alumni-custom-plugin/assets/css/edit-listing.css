@@ -1,0 +1,23 @@
+.page-id-472
+#ds-container > div.container > div > div:nth-child(1) > div
+{
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: none !important;
+}
+.page-id-472
+#ds-container > div.container > div > div:nth-child(1) > div > article > footer > span{
+    display: none;
+}
+@media (max-width: 992px) {
+    .page-id-472
+    #geodir_content{
+        width: 67% !important;
+    }
+}
+@media (max-width: 768px) {
+    .page-id-472
+    #geodir_content{
+        width: 100% !important;
+    }
+}
