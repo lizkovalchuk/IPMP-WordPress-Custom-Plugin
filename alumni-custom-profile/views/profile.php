@@ -23,10 +23,30 @@ if($results->have_posts() == true){
 while ( $results->have_posts() ) {
     $results->the_post();
     $id = get_the_ID();
+    $post = get_post($id);
+    $post_meta = get_post_meta($id, '', false);
+    $title = get_the_title();
+
+    global $wpdb;
+    $listing_data = $wpdb->get_results( "SELECT gd_placecategory, post_city , post_region, post_country  FROM `*****table*****` 
+                            WHERE post_id = $id;");
+
+   $country = $listing_data[0]->post_country;
+   $region = $listing_data[0]->post_region;
+   $city = $listing_data[0]->post_city;
+
+   $category_key = $listing_data[0]->gd_placecategory;
+   $categories = array(",25," => "alumni_work", 
+                     ",27," => "student",
+                     ",28," => "humber_projects",
+                     ",56," => "archive"
+   );
+
+   $category_value = array_key_exists($category_key, $categories) ? $categories[$category_key] : null;
 ?>
 
 <fieldset>
-    <h3>Title: <?php echo get_the_title() ?></h3>
+    <h3>Title: <?php echo $title ?></h3>
     <p>Description: <?php echo get_the_excerpt()?></p>
     <a class="profile-edit-listing-button" href="<?php echo home_url('edit-listing') . "?post_id=" . $id ;?>">Edit</a>  
 </fieldset> 
@@ -58,10 +78,10 @@ while ( $results->have_posts() ) {
                <input name="alumni_profile_linkedin" id="alumni_profile_linkedin" type="text" value="<?php echo $linkedin[0]->meta_value; ?>" />
             </div> 
             <div class="input-group fixed-width">
-				   <div class="input-group-addon">				
-				      <input name="alumni_profile_update_submit" type="submit" value="Update" id="alumni_profile_update_submit" />				    
-				   </div>
-			   </div>	                    
+	      <div class="input-group-addon">				
+		 <input name="alumni_profile_update_submit" type="submit" value="Update" id="alumni_profile_update_submit" />				    
+	      </div>
+	   </div>	                    
         </form>
     </div>
 </div>
