@@ -47,88 +47,42 @@ function extra_data_function() {
 
 	// JOB FOCUS
 
-	$job_focus_data = $queried_object->geodir_job_focus;
+	$job_focus_key = $queried_object->geodir_job_focus;
+   	$job_focuses = array("1" => "Health", 
+                     "2" => "WATSAN",
+                     "3" => "Policy",
+                     "4" => "Shelter",
+		     "5" => "Refugees",
+	             "6" => "Food Security - Agriculture",
+		     "7" => "Logistics - Operations",
+		     "8" => "Humanitarian Assistance",
+		     "9" => "Advocary",
+	 	     "10" => "Microfinance",
+		     "11" => "Economic development"
+   	);
 
-	if($job_focus_data == "1"){
-		$job_focus_data = "Health";
-	}
-	if($job_focus_data == "2"){
-		$job_focus_data = "WATSAN";
-	}
-	if($job_focus_data == "3"){
-		$job_focus_data = "Policy";
-	}
-	if($job_focus_data == "4"){
-		$job_focus_data = "Shelter";
-	}
-	if($job_focus_data == "5"){
-		$job_focus_data = "Refugees";
-	}
-	if($job_focus_data == "6"){
-		$job_focus_data = "Food Security - Agriculture";
-	}
-	if($job_focus_data == "7"){
-		$job_focus_data = "Logistics - Operations";
-	}
-	if($job_focus_data == "8"){
-		$job_focus_data = "Humanitarian Assistance";
-	}
-	if($job_focus_data == "9"){
-		$job_focus_data = "Advocacy";
-	}
-	if($job_focus_data == "10"){
-		$job_focus_data = "Microfinance";
-	}
-	if($job_focus_data == "11"){
-		$job_focus_data = "Economic development";
-	}
+      $job_focus_value = array_key_exists($job_focus_key, $job_focuses) ? $job_focuses[$job_focus_key] : null;
 
 	// EPERTISE AREA
 
-	$expertise_area_data = $queried_object->geodir_expertise;
-
-	if($expertise_area_data == "1"){
-		$expertise_area_data = "Finance - Accounting";
-	}
-	if($expertise_area_data == "2"){
-		$expertise_area_data = "Project Management";
-	}
-	if($expertise_area_data == "3"){
-		$expertise_area_data = "Health";
-	}	
-	if($expertise_area_data == "4"){
-		$expertise_area_data = "WATSAN";
-	}
-	if($expertise_area_data == "5"){
-		$expertise_area_data = "Policy";
-	}
-	if($expertise_area_data == "6"){
-		$expertise_area_data = "Advocacy";
-	}
-	if($expertise_area_data == "7"){
-		$expertise_area_data = "Shelter";
-	}
-	if($expertise_area_data == "8"){
-		$expertise_area_data = "Refugees";
-	}
-	if($expertise_area_data == "9"){
-		$expertise_area_data = "Food Security - Agriculture";
-	}
-	if($expertise_area_data == "10"){
-		$expertise_area_data = "Logistics - Operations";
-	}
-	if($expertise_area_data == "11"){
-		$expertise_area_data = "Humanitarian Assistance";
-	}
-	if($expertise_area_data == "12"){
-		$expertise_area_data = "Advocacy";
-	}
-	if($expertise_area_data == "13"){
-		$expertise_area_data = "Microfinance";
-	}
-	if($expertise_area_data == "14"){
-		$expertise_area_data = "Economic Development";
-	}
+	$expertise_area_key = $queried_object->geodir_expertise;
+	$expertise_areas = array("1" => "Finance - Accounting", 
+                     "2" => "Project Management",
+                     "3" => "Health",
+                     "4" => "WATSAN",
+		     "5" => "Policy",
+	             "6" => "Advocacy",
+		     "7" => "Shelter",
+		     "8" => "Refugees",
+		     "9" => "Logistics - Operations",
+	 	     "10" => "Microfinance",
+		     "11" => "Humanitarian Assistance",
+		     "12" => "Advocacy",
+		     "13" => "Microfinance",
+		     "14" => "Ecomonic Development"
+   	);
+	
+	$expertise_area_value = array_key_exists($expertise_area_key, $expertise_areas) ? $expertise_areas[$expertise_area_key] : null;
 
 	// LISTING DESCRIPTION
 
@@ -150,7 +104,7 @@ function extra_data_function() {
 
 	<script>jobFocus = document.createElement('p');</script>
 	<?php if($job_focus_data !== null || $job_focus_data == "0") :?>
-		<script>jobFocus.innerHTML = 'Job Focus: <?php  echo $job_focus_data; ?>';</script>
+		<script>jobFocus.innerHTML = 'Job Focus: <?php  echo $job_focus_value; ?>';</script>
 	<?php else : ?>
 		<script>jobFocus.innerHTML = 'Job Focus: Alumni has not speficied job focus'; </script>
 	<?php endif; ?>
